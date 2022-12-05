@@ -5,38 +5,70 @@ let nameRegex=/^([a-z]{2,})$/;
 let emailRegex=/^\w+([\.-]?\w+)*@\w+(\.\w{2,3})+$/; //([\.-]?\w+)*
 let numberFlag=true;
 
-const validateName=name=>{
-    if(nameRegex.test(name) && name != null){
-        return true;
-    }else{
-        return false;
+// const validateName=name=>{
+//     if(nameRegex.test(name) && name != null){
+//         return true;
+//     }else{
+//         return false;
+//     }
+// }
+
+// const validateEmail=email=>{
+//     if(emailRegex.test(email)){
+//         return true;
+//     }else{
+//         return false;
+//     }
+// }
+
+// const validateGrade=grade=>{
+//     if(!isNaN(grade)){
+//         return true;
+//     }else{
+//         return false;
+//     }
+// }
+
+// const validateDepartment=department=>{
+//     if(department == 'OS' || department == 'AI' || department == 'SD'){
+//         return true;
+//     }else{
+//         return false;
+//     }
+// }
+//======================= another way ====================
+function validate(variable){
+    switch(variable){
+        case studentName:
+            if(nameRegex.test(studentName) && studentName != null){
+                return true;
+            }else{
+                return false;
+            }
+            break;
+        case grade:
+            if(!isNaN(grade)){
+                return true;
+            }else{
+                return false;
+            }
+            break;
+        case email:
+            if(emailRegex.test(email)){
+                return true;
+            }else{
+                return false;
+            }
+            break;
+        case department:
+            if(department == 'OS' || department == 'AI' || department == 'SD'){
+                return true;
+            }else{
+                return false;
+            }
+            break;
     }
 }
-
-const validateEmail=email=>{
-    if(emailRegex.test(email)){
-        return true;
-    }else{
-        return false;
-    }
-}
-
-const validateGrade=grade=>{
-    if(!isNaN(grade)){
-        return true;
-    }else{
-        return false;
-    }
-}
-
-const validateDepartment=department=>{
-    if(department == 'OS' || department == 'AI' || department == 'SD'){
-        return true;
-    }else{
-        return false;
-    }
-}
-
 
 while(numberFlag){
     if(isNaN(stdudentsNumber)){
@@ -67,17 +99,17 @@ for(let i=0;i<stdudentsNumber;i++){
             email=studentArr[2];  
             department=studentArr[3];
             
-            if(!validateName(studentName)){
+            if(!validate(studentName)){
                 msg="name is invalid, please try again...!";
                 console.log('nooooo');
                 flag=false;
-            }else if(!validateGrade(grade)){
+            }else if(!validate(grade)){
                 msg="grade is not a number, please try again...!";
                 flag=false;
-            }else if(!validateEmail(email)){
+            }else if(!validate(email)){
                 msg="email pattern is invalid, please try again...!";
                 flag=false;
-            }else if(!validateDepartment(department)){
+            }else if(!validate(department)){
                 msg="department should be one of [OS,AI,SD]";
                 flag=false;
             }else{
