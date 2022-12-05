@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #ccc4c4;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        //console.log(number1); //number1 is not defined 
+        //console.log(number2); //error because number2 has not declared yet
+        //console.log(number3); //error because number2 has not declared yet
+
+        //======= print number after removing var keyword =========
+        //console.log(number1); //yes change occured, it generates error 
+    </script>
+
+    <h1>Hello Moo...!</h1>
+    <script src="External.js"></script>
+    <script>
+        //console.log(number1); //will print the value 3 because it has been defined before
+        //console.log(number2); //it results value 2.9;
+        //console.log(number3); // it results value in decimal form
+
+
+        //======= print number after removing var keyword =========
+        //console.log(number1); //yes change occured, it generates error 
+    </script>
+
+    <script>
+        //************** task_4 **************
+        //console.log(number1+number2);
+        //console.log(number1+numbersArr);  //it results number and the array concatinated as a string
+        //console.log(number2+flag); //it considers flag as an int 1 and sums it with number2 finally generate the sum of two numbers
+        //console.log(firstName+flag); //it results name and true concatinated as string 
+        //console.log(number1+firstName); //resulted as a concatinated string 
+        //console.log(number1*flag); //it results 3, this means it converts flag into integer value
+        //console.log(number1/lastName); //it results NAN
+        //console.log(`first name:${firstName} \nsecond name:${middleName} \nlast name:${lastName}`);
+        // for(let i=0 ; i<5 ; i++){
+        //     console.log(numbersArr[i]);
+        // }
+
+        let resArr=[];
+        for(let i=0 ; i<5 ; i++){
+            resArr[i]=numbersArr[i]*5;
+        }
+
+        for(let i=0 ; i<5 ; i++){
+            if(resArr[i]>20){
+                console.log(resArr[i]);
+            }
+        }
+
+
+    </script>
+</body>
+</html>
